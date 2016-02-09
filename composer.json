@@ -16,7 +16,8 @@
         }
     },
     "require": {
-        "beberlei/assert": "^2.4"
+        "beberlei/assert": "^2.4",
+        "measurements/bytes": "^0.2.0"
     },
     "require-dev": {
         "mockery/mockery": "^0.9.4",
