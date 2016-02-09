@@ -1,5 +1,6 @@
 [![Build Status](https://travis-ci.org/arnovr/owncloud-statistics.svg?branch=master)](https://travis-ci.org/arnovr/owncloud-statistics)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/arnovr/owncloud-statistics/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/arnovr/owncloud-statistics/?branch=master)
+[![Code Coverage](https://scrutinizer-ci.com/g/arnovr/owncloud-statistics/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/arnovr/owncloud-statistics/?branch=master)
 
 This App is in beta and not yet released.
 

@@ -18,6 +18,16 @@
     <filter>
         <whitelist>
             <directory>src</directory>
+            <!--
+            The directories below are fully depend on static calls in owncloud.
+            These cant be mocked, therefor ignored.
+             -->
+            <exclude>
+                <directory>src/Statistics/Infrastructure/Owncloud/Activity</directory>
+                <directory>src/Statistics/Infrastructure/Owncloud/App</directory>
+                <directory>src/Statistics/Infrastructure/Owncloud/Storage</directory>
+                <directory>src/Statistics/Infrastructure/Owncloud/User</directory>
+            </exclude>
         </whitelist>
     </filter>
     <listeners>
