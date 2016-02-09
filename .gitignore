@@ -3,5 +3,5 @@
 composer.phar
 coverage
 build/node_modules/
-
+.vagrant
 !/js/vendor
