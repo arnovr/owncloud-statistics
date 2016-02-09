@@ -58,7 +58,7 @@ class UpdateChartsCommand extends Command
             try {
                 $this->createStorage($user, $usageScanner, $quotaScanner, $addStorageHandler);
             } catch (InvalidArgumentException $e) {
-                throw UpdateChartsException::forUser($user->name());
+                $output->writeln("Could not update storage for user: " . $user->name());
             }
         }
     }

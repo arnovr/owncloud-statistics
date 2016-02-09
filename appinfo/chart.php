@@ -31,8 +31,7 @@ class Chart extends App
     {
         parent::__construct('statistics', $urlParams);
         $this->container = $this->getContainer();
-        // remove appinfo/file.php, sucks... you know it.
-        // Require after getContainer, else test fails
+
         $path = dirname(dirname(__FILE__));
         require_once($path . '/vendor/autoload.php');
 
