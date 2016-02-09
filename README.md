@@ -1,3 +1,7 @@
+[![Build Status](https://travis-ci.org/arnovr/owncloud-statistics.svg?branch=master)](https://travis-ci.org/arnovr/owncloud-statistics)
+
+This App is in beta and not yet released.
+
 Statistics
 ==========
 Statistics is an application for owncloud 7 and 8.

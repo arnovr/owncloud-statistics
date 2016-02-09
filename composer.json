@@ -16,7 +16,6 @@
         }
     },
     "require": {
-        "measurements/bytes": "dev-master",
         "beberlei/assert": "^2.4"
     },
     "require-dev": {
