@@ -1,0 +1,29 @@
+{
+    "name": "arnovr/storage-statistics",
+    "description": "Storage Statistics package",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Arno van Rossum",
+            "email": "arno@van-rossum.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Arnovr\\Statistics\\":  "src/Statistics",
+            "Arnovr\\Statistics\\Tests\\": "tests/Statistics"
+        }
+    },
+    "require": {
+        "measurements/bytes": "dev-master",
+        "beberlei/assert": "^2.4"
+    },
+    "require-dev": {
+        "mockery/mockery": "^0.9.4",
+        "phpunit/phpunit": "^5.1",
+        "phpmd/phpmd": "^2.3",
+        "squizlabs/php_codesniffer": "^2.5",
+        "arnovr/owncloud-provisioning-api-client": "^0.0.4"
+    }
+}

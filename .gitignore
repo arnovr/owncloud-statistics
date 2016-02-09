@@ -1,0 +1,7 @@
+/vendor/
+.idea
+composer.phar
+coverage
+build/node_modules/
+
+!/js/vendor

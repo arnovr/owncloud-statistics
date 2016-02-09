@@ -1,0 +1,10 @@
+{
+  "name": "Statistics",
+  "version": "0.0.1",
+  "dependencies": {
+    "angular": "",
+    "angular-route": "",
+    "angular-bootstrap": "",
+    "angular-resource": ""
+  }
+}

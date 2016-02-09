@@ -1,0 +1,7 @@
+{
+  "directory": "../js/vendor",
+  "ignoredDependencies": [
+    "jquery",
+    "moment"
+  ]
+}

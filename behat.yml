@@ -1,0 +1,5 @@
+default:
+    suites:
+        view_features:
+            paths:    [ %paths.base%/features/View ]
+            contexts: [ Domain\View\ViewInformationContext ]

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name="pre-commit" default="build">
+
+    <target name="build"
+            depends="prepare-environment,phpmd,phpcs,phpunit"/>
+
+    <target name="prepare-environment"
+            depends="set-test-tree-location">
+        <echo message="OK"/>
+    </target>
+
+    <target name="set-test-tree-location">
+        <condition value="${working-dir}" else="${basedir}" property="test-tree-location">
+            <isset property="working-dir"/>
+        </condition>
+    </target>
+
+    <target name="check-composer">
+        <available file="${test-tree-location}/composer.phar" property="composer.installed"/>
+    </target>
+
+    <target name="composer-download"
+            depends="check-composer"
+            unless="composer.installed">
+        <get src="http://getcomposer.org/composer.phar" dest="${test-tree-location}/composer.phar"/>
+    </target>
+
+    <target name="composer-run-install"
+            depends="composer-download">
+        <exec executable="php" failonerror="true">
+            <arg line="${test-tree-location}/composer.phar install --prefer-dist --quiet --no-interaction --working-dir ${test-tree-location}"/>
+        </exec>
+    </target>
+
+    <target name="phpmd">
+        <exec executable="${test-tree-location}/vendor/bin/phpmd" failonerror="true">
+            <arg line="src/ text ${test-tree-location}/phpmd.xml"/>
+        </exec>
+        <echo message="OK"/>
+    </target>
+    <target name="phpcs" depends="set-test-tree-location">
+        <exec executable="${test-tree-location}/vendor/bin/phpcs" failonerror="true">
+            <arg value="--standard=${test-tree-location}/phpcs.xml"/>
+            <arg value="--warning-severity=0"/>
+            <arg value="--extensions=php"/>
+            <arg value="--report=full"/>
+            <arg value="src"/>
+        </exec>
+        <echo message="OK"/>
+    </target>
+    <target name="behat" depends="set-test-tree-location">
+        <exec executable="${test-tree-location}/vendor/bin/behat" failonerror="true">
+            <arg value="--colors"/>
+        </exec>
+        <echo message="OK"/>
+    </target>
+    <target name="phpunit" depends="set-test-tree-location">
+        <exec outputproperty="phpunit-output-raw" resultproperty="phpunit-exitcode"
+              executable="${test-tree-location}/vendor/bin/phpunit" failonerror="false">
+            <arg line="--configuration=${test-tree-location}/phpunit.xml --stop-on-failure"/>
+        </exec>
+        <condition property="phpunit-output" value="${phpunit-output-raw}" else="OK">
+            <isfailure code="${phpunit-exitcode}"/>
+        </condition>
+        <echo message="${phpunit-output}"/>
+        <fail message="PHPUnit failed">
+            <condition>
+                <isfailure code="${phpunit-exitcode}"/>
+            </condition>
+        </fail>
+    </target>
+</project>

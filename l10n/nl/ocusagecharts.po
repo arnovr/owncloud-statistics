@@ -1,0 +1,82 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ownCloud Core 8.0.0\n"
+"Report-Msgid-Bugs-To: translations@owncloud.org\n"
+"POT-Creation-Date: 2016-01-26 15:46+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: appinfo/app.php:10
+msgid "Statistics"
+msgstr "Grafieken"
+
+#: templates/chartcontent.php:2
+msgid "storage"
+msgstr "Data"
+
+#: templates/chartcontent.php:5
+msgid "activities"
+msgstr "Activiteiten"
+
+#: templates/chartcontent.php:8
+msgid "usage"
+msgstr "verbruik"
+
+#: templates/chartcontent.php:10
+msgid "chart_description"
+msgstr "Laat {{ Charts.tabType }} zien in de laatste {{ selectedDay }} dagen<span ng-show="Charts.tabType == 'storage'"> in {{ unitOfMeasurementText }}</span>"
+
+#: templates/chartsettings.php:3
+msgid "selectday_1"
+msgstr "Vandaag"
+
+#: templates/chartsettings.php:4
+msgid "selectday_7"
+msgstr "Afgelopen 7 dagen"
+
+#: templates/chartsettings.php:5
+msgid "selectday_30"
+msgstr "Afgelopen 30 dagen"
+
+#: templates/chartsettings.php:9
+msgid "sizes_kb"
+msgstr "Kilobytes"
+
+#: templates/chartsettings.php:10
+msgid "sizes_mb"
+msgstr "Megabytes"
+
+#: templates/chartsettings.php:11
+msgid "sizes_gb"
+msgstr "Gigabytes"
+
+#: templates/userlist.php:2
+msgid "title_selected_users"
+msgstr "Geselecteerde gebruikers"
+
+#: templates/userlist.php:7
+msgid "no_users_selected"
+msgstr "Geen gebruikers geselecteerd"
+
+#: templates/userlist.php:9
+msgid "title_user_list"
+msgstr "Gebruikers lijst"
+
+#: templates/userlist.php:17
+msgid "previous_button"
+msgstr "Vorige"
+
+#: templates/userlist.php:21
+msgid "next_button"
+msgstr "Volgende"
